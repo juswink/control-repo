@@ -8,8 +8,13 @@ class profile::platform::windows::base {
 
  file { 'C:/adminTools':
     ensure => 'directory',
-    mode   => '0650',
-    owner  => 'ArtVandelay',
-    group  => 'Administrators',
+  }
+
+  acl { ':/adminTools':
+    purge       => true,
+    permissions => [
+      { identity => 'Administrators', rights => ['read','execute'] },
+      { identity => 'ArtVandelay', rights => ['full'] }
+    ],
   }
 }
