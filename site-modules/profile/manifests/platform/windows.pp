@@ -7,7 +7,7 @@ class profile::platform::windows::base {
   }
 
  file { 'C:/adminTools':
-    ensure => 'file',
+    ensure => 'directory',
     mode   => '0650',
     owner  => 'ArtVandelay',
     group  => 'Administrators',
