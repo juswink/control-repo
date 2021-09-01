@@ -10,7 +10,7 @@ class profile::platform::windows::base {
     ensure => 'directory',
   }
 
-  acl { ':/adminTools':
+  acl { 'C:/adminTools':
     purge       => true,
     permissions => [
       { identity => 'Administrators', rights => ['read','execute'] },
