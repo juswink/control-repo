@@ -6,7 +6,7 @@ class profile::platform::windows::base {
     groups => 'Administrators',
   }
 
- file { 'C:/adminTools':
+  file { 'C:/adminTools':
     ensure => 'directory',
   }
 
