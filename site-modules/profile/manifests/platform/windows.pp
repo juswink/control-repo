@@ -1,4 +1,4 @@
-class profile::platform::windows::profile::base {
+class profile::platform::windows::base {
 
   user { 'Art Vandelay':
     ensure => 'present',
