@@ -1,5 +1,12 @@
 class profile::platform::windows::base {
 
+  registry_value { 'HKLM\System\CurrentControlSet\Control\FileSystem\LongPathsEnabled':
+    ensure   => 'present',
+    data     => [1],
+    provider => 'registry',
+    type     => 'dword',
+  }
+  
   user { 'Art Vandelay':
     ensure => 'present',
     name   => 'ArtVandelay',
