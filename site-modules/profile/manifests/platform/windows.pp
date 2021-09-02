@@ -1,5 +1,7 @@
 class profile::platform::windows::base {
 
+  include chocolatey
+
   registry_value { 'HKLM\System\CurrentControlSet\Control\FileSystem\LongPathsEnabled':
     ensure   => 'present',
     data     => [1],
@@ -64,5 +66,9 @@ class profile::platform::windows::base {
 
   exec { 'MobaXterm':
     command => 'C:\Windows\System32\msiexec.exe /i C:\Temp\MobaXterm_installer_21.3.msi /qn /norestart',
+  }
+
+  exec { '7-zip':
+    command => 'C:\ProgramData\chocolatey\choco.exe install 7zip',
   }
 }
