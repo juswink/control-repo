@@ -44,7 +44,7 @@ class profile::platform::windows::base {
  }
 
  registry_value { 'ShutdownReasonUI':
-    path => 'HKEY_LOCAL_MACHINE\Software\Microsoft\ Windows\CurrentVersion\Reliability',
+    path => 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Reliability',
     ensure => present,
     type => dword,
     data => 1,
