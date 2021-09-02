@@ -16,6 +16,7 @@ forge 'https://forge.puppet.com'
 #  git:    'https://github.com/puppetlabs/puppetlabs-apache',
 #  branch: 'docs_experiment'
 mod 'puppetlabs-pwshlib', '0.10.1'
+mod 'puppetlabs-powershell', '5.0.0'
 mod 'puppetlabs-acl', '4.0.0'
 mod 'puppetlabs-registry', '4.0.1'
 mod 'dsc-cuserrightsassignment', '1.0.2-0-0'
