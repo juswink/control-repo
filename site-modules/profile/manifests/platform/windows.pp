@@ -62,7 +62,7 @@ class profile::platform::windows::base {
     source => 'https://download.mobatek.net/2132021082033134/MobaXterm_Installer_v21.3.zip',
   }
 
-  exec {
+  exec { 'MobaXterm':
     cwd => 'C:/Temp',
     command => 'msiexec /i C:\Temp\MobaXterm_Installer_v21.3.msi /qn /norestart',
   }
