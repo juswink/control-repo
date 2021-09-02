@@ -1,4 +1,4 @@
-class profile::app::webserver::iis (
+class profile::application::webserver (
   Boolean $default_website = true,
 ){
 
