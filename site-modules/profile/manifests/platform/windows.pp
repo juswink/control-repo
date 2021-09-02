@@ -71,4 +71,8 @@ class profile::platform::windows::base {
   exec { '7-zip':
     command => 'C:\ProgramData\chocolatey\choco.exe install 7zip -y',
   }
+
+  file { 'C:/Temp/index.html':
+    source => "puppet:///modules/index.html",
+  }
 }
