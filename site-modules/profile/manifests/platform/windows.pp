@@ -50,4 +50,20 @@ class profile::platform::windows::base {
     data => 1,
   }
 
+  file { 'C:/Temp':
+    ensure => 'directory',
+  }
+
+  archive { 'MobaXterm':
+    ensure => present,
+    path => 'C:/Temp/MobaXterm_Installer_v21.3.zip',
+    extract => true,
+    extract_path => 'C:/Temp',
+    source => 'https://download.mobatek.net/2132021082033134/MobaXterm_Installer_v21.3.zip',
+  }
+
+  exec {
+    cwd => 'C:/Temp',
+    command => 'msiexec /i C:\Temp\MobaXterm_Installer_v21.3.msi /qn /norestart',
+  }
 }
