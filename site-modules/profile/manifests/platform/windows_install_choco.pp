@@ -1,5 +1,5 @@
 class profile::platform::windows::base::install:choco { 'chocolatey':
   include chocolatey
 
-  use_7zip => true,
+  use_7zip => false,
 }
