@@ -72,7 +72,8 @@ class profile::platform::windows::base {
     command => 'C:\ProgramData\chocolatey\choco.exe install 7zip -y',
   }
 
-  file { 'C:/Temp/index.html':
-    source => "puppet:///modules/index.html",
+  exec { 'curl':
+    command => 'C:\ProgramData\chocolatey\choco.exe install curl -y',
   }
+
 }
