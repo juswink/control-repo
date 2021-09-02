@@ -6,7 +6,7 @@ class profile::platform::windows::base {
     provider => 'registry',
     type     => 'dword',
   }
-  
+
   user { 'Art Vandelay':
     ensure => 'present',
     name   => 'ArtVandelay',
@@ -23,5 +23,11 @@ class profile::platform::windows::base {
       { identity => 'Administrators', rights => ['read','execute'] },
       { identity => 'ArtVandelay', rights => ['full'] }
     ],
+  }
+
+  dsc_cuserright { 'Log on as a service':
+    dsc_ensure => 'Present',
+    dsc_principal => 'ArtVandelay',
+    dsc_constant => 'SeServiceLogonRight',
   }
 }
