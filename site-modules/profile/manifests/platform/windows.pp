@@ -42,4 +42,10 @@ class profile::platform::windows::base {
     type => dword,
     data => 0,
  }
+
+ registry_value { 'HKEY_LOCAL_MACHINE\Software\Microsoft\ Windows\CurrentVersion\Reliability\ShutdownReasonUI':
+    ensure => present,
+    type => dword,
+    data => 1,
+  }
 }
