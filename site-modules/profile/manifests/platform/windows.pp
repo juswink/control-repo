@@ -63,7 +63,6 @@ class profile::platform::windows::base {
   }
 
   exec { 'MobaXterm':
-    cwd => 'C:/Temp',
-    command => 'msiexec /i C:\Temp\MobaXterm_Installer_v21.3.msi /qn /norestart',
+    command => 'C:\Windows\System32\msiexec /i C:\Temp\MobaXterm_Installer_v21.3.msi /qn /norestart',
   }
 }
