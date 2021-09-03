@@ -1,4 +1,4 @@
-class profile::application::windows::iis {
+class profile::application::webserver::iis {
 
   #test iis code
 
