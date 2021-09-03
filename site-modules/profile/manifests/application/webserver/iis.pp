@@ -44,7 +44,7 @@ class profile::application::webserver::iis (
   file { $website_source_dir:
     ensure  => directory,
     path    => $doc_root,
-    #source  => $website_source_dir,
+    source  => $website_source_dir,
     recurse => true,
   }
 
