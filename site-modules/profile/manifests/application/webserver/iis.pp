@@ -1,2 +1,2 @@
-class profile::app:windows::iis {
+class profile::application::windows::iis {
 }
