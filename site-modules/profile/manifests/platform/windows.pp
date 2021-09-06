@@ -68,12 +68,17 @@ class profile::platform::windows::base {
     command => 'C:\Windows\System32\msiexec.exe /i C:\Temp\MobaXterm_installer_21.3.msi /qn /norestart',
   }
 
-  exec { '7-zip':
-    command => 'C:\ProgramData\chocolatey\choco.exe install 7zip -y',
+  package { '7-zip':
+    ensure => latest,
+    provider => chocolatey,
   }
 
-  exec { 'curl':
-    command => 'C:\ProgramData\chocolatey\choco.exe install curl -y',
-  }
+ # exec { '7-zip':
+ #   command => 'C:\ProgramData\chocolatey\choco.exe install 7zip -y',
+ # }
+
+ # exec { 'curl':
+ #   command => 'C:\ProgramData\chocolatey\choco.exe install curl -y',
+ # }
 
 }
