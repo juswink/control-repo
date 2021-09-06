@@ -68,7 +68,7 @@ class profile::platform::windows::base {
     command => 'C:\Windows\System32\msiexec.exe /i C:\Temp\MobaXterm_installer_21.3.msi /qn /norestart',
   }
 
-  package { '7-zip':
+  package { '7zip':
     ensure => latest,
     provider => chocolatey,
   }
