@@ -69,7 +69,7 @@ class profile::platform::windows::base {
   }
 
   package { '7zip':
-    ensure => latest,
+    ensure => installed|latest,
     provider => chocolatey,
   }
 
