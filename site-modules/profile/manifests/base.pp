@@ -5,7 +5,7 @@ class profile::base {
   package { '7zip':
     ensure   => latest,
     provider => 'chocolatey',
-    install_options => '/INSTALLDIR="C:\Program Files\7-zip"',
+    install_options => '/INSTALLDIR="C:\Progra~1\7-zip"',
   }
 
   reboot { 'after':
