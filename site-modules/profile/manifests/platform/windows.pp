@@ -1,6 +1,6 @@
 class profile::platform::windows::base {
 
-  include chocolatey
+  #include chocolatey
 
   registry_value { 'HKLM\System\CurrentControlSet\Control\FileSystem\LongPathsEnabled':
     ensure   => 'present',
@@ -68,10 +68,10 @@ class profile::platform::windows::base {
     command => 'C:\Windows\System32\msiexec.exe /i C:\Temp\MobaXterm_installer_21.3.msi /qn /norestart',
   }
 
-  package { '7zip':
-    ensure   => latest,
-    provider => 'chocolatey',
-  }
+  #package { '7zip':
+  #  ensure   => latest,
+  #  provider => 'chocolatey',
+  #}
 
  # exec { '7-zip':
  #   command => 'C:\ProgramData\chocolatey\choco.exe install 7zip -y',
