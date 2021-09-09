@@ -8,4 +8,8 @@ class profile::base {
     install_options => '/INSTALLDIR="C:\Program Files\7-zip"',
   }
 
+  reboot { 'after':
+    subscribe       => Package['7zip'],
+  }
+
 }
